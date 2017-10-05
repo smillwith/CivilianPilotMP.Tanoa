@@ -8,3 +8,4 @@ Arrive at the airport. Reach your aircraft. Refuel if needed. Taxi to the depart
 
 -----
 
+[Download the PBO directly](https://github.com/smillwith/CivilianPilotMP.Tanoa/raw/master/pbo/CivilianPilotMP.Tanoa.pbo)
