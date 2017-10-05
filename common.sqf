@@ -85,17 +85,14 @@ dingus_fnc_initInfoStand = {
     _item addAction ["Weather: Rainy", {[] call dingus_fnc_SetRainy;}, [], 45, false, true, "", "rain < 0.8"];
   };
 
-  //Single player or clients only
-  if (!isMultiplayer || isServer) then {
-    _item addAction ["Turn Location Markers ON", {[] call dingus_fnc_ToggleLocationMarkers;}, [], 45, false, true, "", "[""TaskLocations"", ""1""] call dingus_fnc_getVar == ""0"""];
-    _item addAction ["Turn Location Markers OFF", {[] call dingus_fnc_ToggleLocationMarkers;}, [], 45, false, true, "", "[""TaskLocations"", ""1""] call dingus_fnc_getVar == ""1"""];
+  _item addAction ["Turn Location Markers ON", {[] call dingus_fnc_ToggleLocationMarkers;}, [], 45, false, true, "", "[""TaskLocations"", ""1""] call dingus_fnc_getVar == ""0"""];
+  _item addAction ["Turn Location Markers OFF", {[] call dingus_fnc_ToggleLocationMarkers;}, [], 45, false, true, "", "[""TaskLocations"", ""1""] call dingus_fnc_getVar == ""1"""];
 
     //_item addAction ["Turn Landing Aids ON", {[] call dingus_fnc_enableLandingAids;}, [], 0.45, false, true, "", "([""HelpersVisible"", ""0""] call dingus_fnc_getVar) == ""0"""];
     //_item addAction ["Turn Landing Aids OFF", {[] call dingus_fnc_disableLandingAids;}, [], 0.45, false, true, "", "([""HelpersVisible"", ""0""] call dingus_fnc_getVar) == ""1"""];
 
     //Set setViewDistance 3500
-    _item addAction ["Adjust my View Distance", {setViewDistance 3500}, [], 0.45, false, true, "", "(viewDistance) < 3500"];
-  };
+  _item addAction ["Adjust my View Distance", {setViewDistance 3500}, [], 0.45, false, true, "", "(viewDistance) < 3500"];
 };
 
 dingus_fnc_ToggleLocationMarkers = {

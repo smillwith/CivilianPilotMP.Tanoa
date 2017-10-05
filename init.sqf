@@ -22,11 +22,8 @@ waitUntil { scriptDone _handle };
 ["CurrentCompanion", nil] call dingus_fnc_setVar;
 ["OnBoarding", "0"] call dingus_fnc_setVar;
 
-if (isServer) then {
-  execVM "ai.sqf";
-  execVM "passengers.sqf";
-}
-
+execVM "ai.sqf";
+execVM "passengers.sqf";
 execVM "companion.sqf";
 execVM "planeHelpers.sqf";
 
